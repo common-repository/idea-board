@@ -1,0 +1,792 @@
+#idea-board {
+    width: 100%;
+    display: block;
+    font-size: 12px;
+    overflow: hidden;
+    font-family: "Malgun Gothic", "Dotum", "Arial", serif;
+}
+
+#idea-board * {
+    box-shadow: none;
+    text-shadow: none;
+    line-height: inherit;
+}
+
+#idea-board label {
+    cursor: pointer;
+}
+
+#idea-board img {
+    max-width: 100%;
+}
+
+#idea-board:before,
+#idea-board:after {
+    display: none;
+}
+
+#idea-board .idea-board-hidden {
+    display: none;
+}
+
+#idea-board ul {
+    margin: 0;
+}
+
+#idea-board ul.children {
+    padding-left: 4%;
+}
+
+/**
+reset
+*/
+#idea-board .idea-board-reset * {
+    margin: 0;
+    padding: 0;
+    width: inherit;
+    height: inherit;
+    border: inherit;
+    background: inherit;
+    font-size: inherit;
+    text-align: inherit;
+    color: inherit;
+    text-decoration: inherit;
+    font-style: inherit;
+    box-shadow: none;
+    border-radius: 0;
+    line-height: 1;
+    text-shadow: none;
+    border: none;
+}
+
+#idea-board .idea-board-reset2 * {
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    background: inherit;
+    font-size: inherit;
+    text-align: inherit;
+    text-decoration: inherit;
+    font-style: inherit;
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+}
+
+#idea-board select,
+#idea-board input,
+#idea-board .idea-search-form select,
+#idea-board .idea-search-form input[type="text"],
+#idea-board .idea-board-button,
+#idea-board input[type="submit"] {
+    box-shadow: none;
+    display: inline-block;
+    padding: 8px 12px;
+    margin-bottom: 0;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-decoration: none;
+    text-transform: none;
+    margin-right: 5px;
+    border: 1px solid #e1e1e1;
+    width: auto;
+    height: auto;
+    background: #f8f8f8 none;
+    color: #919191;
+    text-align: left;
+    list-style: none;
+    line-height: 1;
+    font-weight: bold;
+    text-shadow: none;
+    font-size: 12px;
+    font-family: Malgun Gothic, Arial, serif;
+}
+
+#idea-board .idea-search-form input[type="submit"] {
+    margin-right: 0;
+}
+
+#idea-board input[type="checkbox"] {
+    cursor: pointer;
+}
+
+#idea-board .idea-board-button,
+#idea-board input[type="submit"] {
+    padding: 10px 12px;
+    outline: none;
+    border: none;
+}
+
+#idea-board .idea-search-form {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+#idea-board .idea-board-button,
+#idea-board input[type="submit"] {
+    background-color: #337ab7;
+    color: #fff;
+    min-width: inherit;
+    text-align: center;
+}
+
+#idea-board input[type="radio"],
+#idea-board input[type="checkbox"] {
+    position: relative;
+    -webkit-appearance: none;
+    height: 1.5em;
+    width: 1.5em;
+    margin-bottom: -0.25em;
+    margin-right: 5px;
+    vertical-align: top;
+    padding: 0;
+}
+
+#idea-board input[type="checkbox"]:checked:before {
+    content: "\2713";
+    position: absolute;
+    font-size: 1em;
+    left: 1px;
+    top: 2px;
+    text-align: center;
+    width: 1.25em;
+    color: #337ab7;
+}
+
+#idea-board .idea-vertical-top,
+#idea-board .idea-board-table .idea-vertical-top {
+    vertical-align: top;
+}
+
+#idea-board .idea-board-category {
+    margin: 10px 0;
+}
+
+#idea-board .idea-board-category ul {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+#idea-board .idea-board-category li {
+    float: left;
+    list-style: none;
+    margin: 0;
+}
+
+#idea-board .idea-board-category li:before {
+    content: normal;
+}
+
+#idea-board .idea-board-category li a {
+    text-decoration: none;
+    padding: 8px 20px;
+    border: 1px solid #dedede;
+    margin-left: -1px;
+    display: block;
+    background: #fff;
+}
+
+#idea-board .idea-board-category li:first-child a {
+    margin-left: 0;
+}
+
+#idea-board .idea-board-category li.active a,
+#idea-board .idea-board-category li a:hover,
+#idea-board .idea-board-category li a:focus {
+    background-color: #337ab7;
+    color: #fff;
+}
+
+#idea-board .idea-board-table {
+    border-collapse: collapse;
+    border: none;
+    border-top: 2px solid #545861;
+    margin: 0;
+    width: 100%;
+    table-layout: fixed;
+    clear: both;
+    background: #fff;
+}
+
+#idea-board .idea-board-table th,
+#idea-board .idea-board-table td {
+    padding: 7px 8px;
+    border: 1px solid #dedede;
+    vertical-align: middle;
+    line-height: normal;
+    background-color: transparent;
+}
+
+#idea-board .idea-board-table thead th,
+#idea-board .idea-board-table thead td {
+    padding: 8px;
+}
+
+#idea-board .idea-board-table tr {
+    background-color: transparent;
+}
+
+#idea-board .idea-board-table thead th {
+    text-align: center;
+    font-weight: bold;
+}
+
+#idea-board.idea-board-archive .idea-board_no {
+
+}
+
+#idea-board .screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+#idea-board .pagination,
+#idea-board .pagination *,
+#idea-board .navigation,
+#idea-board .navigation *,
+#idea-board .pagination .prev,
+#idea-board .pagination .next {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    background: inherit;
+    font-size: inherit;
+    text-align: inherit;
+    text-decoration: inherit;
+    font-style: inherit;
+    box-shadow: none;
+    border-radius: 0;
+    position: inherit;
+    color: inherit;
+    overflow: inherit;
+}
+
+#idea-board .pagination:before,
+#idea-board .pagination *:before,
+#idea-board .pagination:after,
+#idea-board .pagination *:after,
+#idea-board .navigation:before,
+#idea-board .navigation *:before,
+#idea-board .navigation:after,
+#idea-board .navigation *:after,
+#idea-board .pagination .prev:before,
+#idea-board .pagination .next:before {
+    display: none;
+}
+
+#idea-board .pagination {
+    border: none;
+    text-align: center;
+    float: left;
+    width: 100%;
+    clear: both;
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+#idea-board .pagination .page-numbers {
+    position: inherit;
+    padding: 6px 9px;
+    line-height: 1.42857143;
+    text-decoration: none;
+    border: 1px solid #dedede;
+    display: inline-block;
+    margin-left: -5px;
+    height: auto;
+    width: auto;
+    border-radius: 0;
+    box-shadow: none;
+    background: #fff;
+    font-weight: bold;
+}
+
+#idea-board .page-numbers.current {
+    z-index: 2;
+    color: #fff;
+    cursor: default;
+    background-color: #337ab7;
+    border-color: #337ab7;
+}
+
+#idea-board .nav-links {
+    text-align: center;
+}
+
+#idea-board .page-numbers:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+#idea-board .page-numbers:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+#idea-board .idea-board-buttons {
+    margin: 10px 0;
+}
+
+#idea-board .idea-col-title a {
+    display: block;
+    color: #333;
+}
+
+#idea-board .idea-col-no {
+    width: 50px;
+    text-align: center;
+}
+
+#idea-board .idea-block {
+    display: block;
+    width: 100%;
+}
+
+#idea-board .idea-block-middle {
+    width: 50%;
+}
+
+#idea-board.idea-board-archive tbody tr:hover {
+    background: #f2f2f2;
+}
+
+#idea-board .idea-col-date {
+    width: 14%;
+    text-align: center;
+}
+
+#idea-board .idea-col-author {
+    width: 14%;
+    text-align: center;
+}
+
+#idea-board .idea-col-hit {
+    width: 10%;
+    text-align: center;
+}
+
+#idea-board .NFI-wrapper {
+    border: solid #dedede 1px;
+    background: #fff;
+    display: block;
+    width: 45%;
+    max-width: 320px;
+    clear: both;
+    margin: 3px 5px 3px 0;
+}
+
+#idea-board .NFI-filename, #idea-board .NFI-button {
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+}
+
+#idea-board .NFI-wrapper, #idea-board .NFI-button {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+#idea-board .NFI-wrapper {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+#idea-board .NFI-button {
+    background: #337ab7;
+    color: #fff;
+    width: 30%;
+    cursor: pointer;
+}
+
+#idea-board .NFI-filename {
+    border: none;
+    width: 64%;
+    background-color: #fff !important;
+    cursor: pointer;
+}
+
+#idea-board .idea-board-file-help {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+#idea-board .idea-board-entry-header {
+
+}
+
+#idea-board .idea-board-entry-header h2 {
+    margin: 20px 0;
+    padding-right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-left: 4px solid #545861;
+    padding-left: 10px;
+    vertical-align: middle;
+    line-height: 25px;
+    text-align: left;
+}
+
+#idea-board .idea-board-meta {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+#idea-board .idea-board-meta ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#idea-board .idea-board-meta ul li {
+    list-style: none;
+    padding: 0 10px;
+    float: left;
+    margin: 0;
+    border-right: 1px solid #dedede;
+    line-height: normal;
+}
+
+#idea-board li:before,
+#idea-board li:after {
+    display: none;
+}
+
+#idea-board .idea-board-meta ul li:last-child {
+    border-right: none;
+}
+
+#idea-board .idea-board-meta ul li:first-child {
+    padding-left: 0;
+}
+
+#idea-board .idea-board-meta ul li span.t1 {
+    margin-right: 4px;
+    font-weight: bold;
+}
+
+#idea-board .idea-board-meta ul li.read_cnt span.t1 {
+    display: inline-block;
+    margin-right: 4px;
+}
+
+#idea-board .idea-board-entry-content {
+    padding: 20px;
+    border: 1px solid #dedede;
+}
+
+#idea-board .idea-board-entry-content img {
+    border: inherit;
+}
+
+#idea-board .idea-text-over {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-wrap: normal;
+}
+
+#idea-board .idea-board-buttons {
+    text-align: right;
+}
+
+#idea-board .idea-board-buttons > *:last-child {
+    margin-right: 0;
+}
+
+#idea-board.idea-board-archive .idea-board-depth {
+    padding: 0 10px;
+    display: inline-block;
+    content: '';
+    width: 5px;
+    height: 5px;
+}
+
+#idea-board .idea-board-comment-count {
+    margin: 0 2px;
+    display: inline-block;
+}
+
+#idea-board .idea-board-depth-icon {
+    margin-right: 5px;
+}
+
+#idea-board .idea-board-file {
+    margin: 0 2px;
+}
+
+#idea-board .idea-board-file:first-child {
+    margin-left: 10px;
+}
+
+#idea-board .idea-board-file-list li {
+    list-style-type: none;
+}
+
+#idea-board .idea-board-file-inputs {
+    visibility: hidden;
+}
+
+#idea-board .idea-board-is-secret {
+    margin-right: 5px;
+}
+
+#idea-board #idea-board-comments {
+    font-size: 11px;
+    overflow: hidden;
+    width: 100%;
+}
+
+#idea-board #idea-board-comments .idea-board-comments-title {
+    font-size: 12px;
+    line-height: inherit;
+    margin: 10px 0;
+    padding: 0;
+}
+
+#idea-board #idea-board-comments textarea:focus {
+    background: #fff;
+}
+
+#idea-board #idea-board-comments,
+#idea-board #idea-board-comments.idea-board-comments-area {
+    width: 100%;
+    max-width: inherit;
+}
+
+#idea-board #idea-board-comments .idea-board-comment-list {
+    width: 100%;
+    clear: both;
+    margin: 0 0 5px;
+    line-height: normal;
+    padding: 0;
+    float: none;
+}
+
+#idea-board #idea-board-comments .idea-board-comment-list li {
+    margin-left: 0;
+}
+
+#idea-board #idea-board-comments .idea-board-comment-list li li {
+    margin-left: 20px;
+}
+
+#idea-board #idea-board-comments .idea-board-comment-list li.idea-board-comment-body {
+    list-style: none;
+    padding: 10px;
+    overflow: hidden;
+    background: #fbfbfc;
+    border: 1px solid #dedede;
+    margin: 0 0 5px;
+}
+
+#idea-board #idea-board-comments .idea-board-comment-list li.idea-board-comment-body a {
+    float: right;
+    margin: 0 0 0 5px;
+    text-decoration: none;
+    background: #fff;
+    font-size: 12px;
+    display: inline-block;
+    padding: 4px 10px;
+    text-transform: uppercase;
+    border: 1px solid #dedede;
+    line-height: inherit;
+}
+
+#idea-board #idea-board-comments .idea-board-comment-list li .idea-board-comment-user-avatar {
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+}
+
+#idea-board #idea-board-comments .idea-board-comment-list li .idea-board-comment-user-avatar img {
+    width: 100%;
+    height: 100%;
+}
+
+#idea-board #idea-board-comments .idea-board-comment-list li .idea-board-comment-author,
+#idea-board #idea-board-comments .idea-board-comment-list li .idea-board-comment-date {
+    display: inline-block;
+}
+
+#idea-board #idea-board-comments .idea-board-comment-list li .idea-board-comment-author,
+#idea-board #idea-board-comments .idea-board-comment-list li .idea-board-comment-content {
+    padding-left: 40px;
+}
+
+#idea-board #idea-board-comments .idea-board-comment-list li .idea-board-comment-author {
+    margin-right: 5px;
+}
+
+#idea-board #idea-board-comments .idea-board-comment-list li .idea-board-comment-content {
+    display: block;
+    padding-top: 10px;
+}
+
+#idea-board #idea-board-comments .comment-reply-title {
+    margin: 10px 0;
+    padding: 10px 0;
+    display: block;
+    float: none;
+    line-height: inherit;
+    width: 100%;
+    font-size: 15px;
+}
+
+#idea-board #idea-board-comment-form {
+    float: left;
+    width: 100%;
+    padding-bottom: 10px;
+    margin: 10px 0 0;
+}
+
+#idea-board #idea-board-comment-form .form-submit input[type="submit"] {
+    margin-right: 0;
+}
+
+#idea-board #idea-board-comment-form h3 {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #dedede;
+    padding-bottom: 5px;
+}
+
+#idea-board #idea-board-comment-form .comment-form-author,
+#idea-board #idea-board-comment-form .comment-form-url,
+#idea-board #idea-board-comment-form .comment-form-email,
+#idea-board #idea-board-comment-form .comment-form-password {
+    display: inline-block;
+    width: 50%;
+    overflow: hidden;
+    float: left;
+}
+
+#idea-board #idea-board-comment-form p label,
+#idea-board #idea-board-comment-form p input[type="text"],
+#idea-board #idea-board-comment-form p input[type="password"],
+#idea-board #idea-board-comment-form p input[type="email"],
+#idea-board #idea-board-comment-form p input[type="url"] {
+    float: left;
+    line-height: 22px;
+    vertical-align: middle;
+    display: block;
+    margin-bottom: 10px;
+    width: auto;
+}
+
+#idea-board #idea-board-comment-form .comment-form-comment {
+    overflow: hidden;
+}
+
+#idea-board #idea-board-comment-form p input[type="text"],
+#idea-board #idea-board-comment-form p input[type="email"],
+#idea-board #idea-board-comment-form p input[type="url"],
+#idea-board #idea-board-comment-form p input[type="password"],
+#idea-board #idea-board-comment-form textarea {
+    border: 1px solid #dedede;
+    width: 98%;
+    padding: 5px 10px;
+    background: #fbfbfc;
+    box-sizing: border-box;
+}
+
+#idea-board #idea-board-comment-form p.comment-form-email input,
+#idea-board #idea-board-comment-form p.comment-form-password input {
+}
+
+#idea-board .comment-subscription-form {
+    clear: both;
+}
+
+#idea-board #idea-board-comment-form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+}
+
+#idea-board #idea-board-comment-form p input[type="text"]:focus,
+#idea-board #idea-board-comment-form p input[type="password"]:focus,
+#idea-board #idea-board-comment-form textarea:focus {
+    background: #fff;
+}
+
+#idea-board #idea-board-comment-form p label {
+    width: 86px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+#idea-board #idea-board-comment-form .comment-form-comment label,
+#idea-board #idea-board-comment-form .comment-form-author label {
+    margin-left: 0;
+}
+
+#idea-board #idea-board-comment-form label.error {
+    display: block;
+    margin-left: 0;
+    width: 100%;
+}
+
+#idea-board #idea-board-comment-form .logged-in-as {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+#idea-board #idea-board-comment-form .comment-notes {
+    line-height: 2;
+    font-weight: bold;
+}
+
+#idea-board #idea-board-comment-form .comment-form-comment {
+    clear: both;
+    margin-bottom: 10px;
+}
+
+#idea-board #idea-board-comment-form .comment-form-comment label {
+    vertical-align: top;
+    line-height: 30px;
+}
+
+#idea-board .error {
+    margin: 0;
+    font-weight: bold;
+    padding: 5px 0;
+    display: block;
+}
+
+#idea-board #idea-board-comment-form .form-submit {
+    text-align: right;
+}
+
+#idea-board .idea-board-file-list h5 {
+    margin: 0;
+    display: none;
+}
+
+#idea-board .idea-board-file-list {
+    margin: 10px 0;
+}
+
+#idea-board .idea-board-article {
+    margin: 0;
+}
+
+#idea-board #respond {
+    margin: 0;
+}
+
+#idea-board .watch-action {
+    margin-bottom: 15px;
+    display: block;
+}

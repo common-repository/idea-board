@@ -1,0 +1,333 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: idea-board v1.0\n"
+"Report-Msgid-Bugs-To: http://www.ideapeople.co.kr\n"
+"POT-Creation-Date: 2016-08-12 22:51+0900\n"
+"PO-Revision-Date: 2016-09-19 19:14+0900\n"
+"Last-Translator: IdeaPeople<>\n"
+"Language-Team: ideapeople <ideapeople@ideapeople.co.kr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Language: en\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+msgid "Title"
+msgstr ""
+
+msgid "Date"
+msgstr ""
+
+msgid "Author"
+msgstr ""
+
+msgid "Hit"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "Secret"
+msgstr ""
+
+msgid "Category"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "Notice"
+msgstr ""
+
+msgid "I will use this article to Notice"
+msgstr ""
+
+msgid "I want to use this article in Secret"
+msgstr ""
+
+msgid "Comments awaiting approval"
+msgstr ""
+
+msgid "You do not have permission"
+msgstr ""
+
+msgid "There is no registered History"
+msgstr ""
+
+msgid "The attachment can be up to %d more"
+msgstr ""
+
+msgid "Maximum capacity per file possible to upload is %sMB"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "List"
+msgstr ""
+
+msgid "I will use the Secret Writing"
+msgstr ""
+
+msgid "You can upload files"
+msgstr ""
+
+msgid "Display the list"
+msgstr ""
+
+msgid "If you use other WordPress plugin or theme Comments Comments Form Please check off"
+msgstr ""
+
+msgid "Whether to use bulletin board comments skins"
+msgstr ""
+
+msgid "We will use skins Board"
+msgstr ""
+
+msgid "Automatically added to the page"
+msgstr ""
+
+msgid "Editor"
+msgstr ""
+
+msgid "Only secret write mode"
+msgstr ""
+
+msgid "It allows you to write a comment"
+msgstr ""
+
+msgid "Comments should be approved must be manually"
+msgstr ""
+
+msgid "This person must have been written comments on the comments previously approved"
+msgstr ""
+
+msgid "Write Notice"
+msgstr ""
+
+msgid "FileDown"
+msgstr ""
+
+msgid "Reply"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Write"
+msgstr ""
+
+msgid "Read"
+msgstr ""
+
+msgid "Previous"
+msgstr ""
+
+msgid "All"
+msgstr ""
+
+msgid "Plugin has been activated"
+msgstr ""
+
+msgid "Plugin has been deactivated"
+msgstr ""
+
+msgid "Forum modifications"
+msgstr ""
+
+msgid "Add Forum"
+msgstr ""
+
+msgid "All Forums"
+msgstr ""
+
+msgid "Management Forum"
+msgstr ""
+
+msgid "IDEA BOARD"
+msgstr ""
+
+msgid "Forum Search"
+msgstr ""
+
+msgid "Forum"
+msgstr ""
+
+msgid "IDEA POST"
+msgstr ""
+
+msgid "Write posts"
+msgstr ""
+
+msgid "Edit posts"
+msgstr ""
+
+msgid "Check posts"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Management posts"
+msgstr ""
+
+msgid "Upload file types to allow"
+msgstr ""
+
+msgid "MB <p>The maximum upload size is <strong>%s</strong> available</p>"
+msgstr ""
+
+msgid "Possible file upload size (MB)"
+msgstr ""
+
+msgid "Exceeding file size limit"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "discussion"
+msgstr ""
+
+msgid "Forum Setting"
+msgstr ""
+
+msgid "Please enter separated by ,"
+msgstr ""
+
+msgid "Theme"
+msgstr ""
+
+msgid "Posts"
+msgstr ""
+
+msgid "Authority"
+msgstr ""
+
+msgid "Post Base Content"
+msgstr ""
+
+msgid "All Open"
+msgstr ""
+
+msgid "Login Users"
+msgstr ""
+
+msgid "Only Author"
+msgstr ""
+
+msgid "Attachments"
+msgstr ""
+
+msgid "You do not have permission to download"
+msgstr ""
+
+msgid "This plugin helps you to add simply a forum for WordPress"
+msgstr ""
+
+msgid "Content"
+msgstr ""
+
+msgid "Password"
+msgstr ""
+
+msgid "Search Text"
+msgstr ""
+
+msgid "Add Media"
+msgstr ""
+
+msgid "<a href='%s'> %s IDEA-BOARD %s Post on %s</a>"
+msgstr ""
+
+msgid "<a href='%s'> %s IDEA-BOARD %s Comment on %s</a>"
+msgstr ""
+
+msgid "File"
+msgstr ""
+
+msgid "Search Type"
+msgstr ""
+
+msgid "%s Your comment has been registered in the article"
+msgstr ""
+
+msgid "Your comment has been registered to comment"
+msgstr ""
+
+msgid "The replies were registered on %s posts"
+msgstr ""
+
+msgid "Notification"
+msgstr ""
+
+msgid "ShortCode"
+msgstr ""
+
+msgid "%s A new article was added"
+msgstr ""
+
+msgid "Notification to the administrator when a new article has been registered"
+msgstr ""
+
+msgid "Notify authors when writing comments have been registered"
+msgstr ""
+
+msgid "Notify authors when writing this reply was registered"
+msgstr ""
+
+msgid "Notification to the author of the comment in the comments when comments have been registered"
+msgstr ""
+
+msgid "Thank you for using %s"
+msgstr ""
+
+msgid "Try to start immediately"
+msgstr ""
+
+msgid "Please feel free to contact us"
+msgstr ""
+
+msgid "Inquiries or suggestions to"
+msgstr ""
+
+msgid "Help more people can use"
+msgstr ""
+
+msgid "It can be quickly developed"
+msgstr ""
+
+msgid "As much as you want to install the plug-in expansion"
+msgstr ""
+
+msgid "Today registered post"
+msgstr ""
+
+msgid "System Info"
+msgstr ""
+
+msgid "Available plug-in connection"
+msgstr ""
+
+msgid "Today registered comments"
+msgstr ""
+
+msgid "Use permalink structure"
+msgstr ""
+
+msgid "It operates wordpress permalink structure will be activated"
+msgstr ""
+
+msgid "Use the bulletin board to update the reference alignment. (In the form of a general forum)<em>If you use a bulletin board Updates Sort reply can not be created, you can create only comment.<br/>If you uncheck this recent article is aligned with standards written reply will be activated</em>"
+msgstr ""
+
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
